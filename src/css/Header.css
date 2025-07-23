@@ -67,7 +67,20 @@ nav {
 
 .hamburger {
   visibility: hidden;
-  height: 80px;
+}
+.hamburger button {
+  border: none;
+  background-color: rgb(4, 4, 68);
+  color: white;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 25px;
+}
+
+.hamburger button:hover {
+  background-color: rgb(12, 12, 106);
 }
 
 .desktop-menu {
@@ -88,6 +101,8 @@ nav {
   }
   .hamburger {
     visibility: visible;
+    position: absolute;
+    left: 0px;
   }
 
   .desktop-menu {
@@ -112,6 +127,7 @@ nav {
   }
   nav {
     height: 50px;
+    text-align: left;
   }
 
   .logo {
@@ -121,9 +137,11 @@ nav {
     font-size: 12px;
     height: 30px;
     gap: 10px;
+    line-height: 30px;
   }
   .nav-socials {
     font-size: 11px;
     height: 40px;
+    line-height: 20px;
   }
 }
