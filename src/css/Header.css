@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial;
 }
 
 header {
@@ -53,7 +54,7 @@ nav {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-socials a {
@@ -81,6 +82,7 @@ nav {
 
 .hamburger button:hover {
   background-color: rgb(12, 12, 106);
+  cursor: pointer;
 }
 
 .desktop-menu {
@@ -91,14 +93,23 @@ nav {
   align-items: center;
   width: 100%;
 }
+
 .mobile-menu {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(4, 4, 68);
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 786px) {
-  nav {
-    min-width: 100%;
-  }
   .hamburger {
     visibility: visible;
     position: absolute;
@@ -113,17 +124,10 @@ nav {
     display: block;
   }
 
-  .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(4, 4, 68);
-    /* padding: 10px; */
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    height: 60px;
-    align-items: center;
+  /* When menu is open */
+  .show-menu {
+    opacity: 1;
+    transform: translateY(0);
   }
   nav {
     height: 50px;
@@ -140,8 +144,9 @@ nav {
     line-height: 30px;
   }
   .nav-socials {
-    font-size: 11px;
+    font-size: 12px;
     height: 40px;
     line-height: 20px;
+    gap: 15px;
   }
 }

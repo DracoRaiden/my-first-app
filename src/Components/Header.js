@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "../css/Header.css";
 import logo from "../img/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faWhatsapp,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header>
       <nav>
         <div className="hamburger">
-          <button
-            onClick={() => {
-              setIsMenuOpen(!isMenuOpen);
-            }}
-          >
-            ☰
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
 
@@ -21,44 +27,51 @@ function Header() {
           <img src={logo} alt="my Logo" className="logo" />
         </div>
 
-        {isMenuOpen && (
-          <div className="mobile-menu">
-            <ul className="nav-pages">
-              <li>
-                <a href="#">HOME</a>
-              </li>
-              <li>
-                <a href="#">ABOUT</a>
-              </li>
-              <li>
-                <a href="#">PORTFOLIO</a>
-              </li>
-              <li>
-                <a href="#">SERVICES</a>
-              </li>
-              <li>
-                <a href="#">PAGES</a>
-              </li>
-              <li>
-                <a href="#">CONTACT</a>
-              </li>
-            </ul>
-            <ul className="nav-socials">
-              <li>
-                <a href="#">whatsapp</a>
-              </li>
-              <li>
-                <a href="#">linkedin</a>
-              </li>
-              <li>
-                <a href="#">github</a>
-              </li>
-              <li>
-                <a href="#">ig</a>
-              </li>
-            </ul>
-          </div>
-        )}
+        <div className={`mobile-menu ${isMenuOpen ? "show-menu" : ""}`}>
+          <ul className="nav-pages">
+            <li>
+              <a href="#">HOME</a>
+            </li>
+            <li>
+              <a href="#">ABOUT</a>
+            </li>
+            <li>
+              <a href="#">PORTFOLIO</a>
+            </li>
+            <li>
+              <a href="#">SERVICES</a>
+            </li>
+            <li>
+              <a href="#">PAGES</a>
+            </li>
+            <li>
+              <a href="#">CONTACT</a>
+            </li>
+          </ul>
+          <ul className="nav-socials">
+            <li>
+              <a href="#">
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <div className="desktop-menu">
           <div className="logo-here">
             <img src={logo} alt="my Logo" className="logo" />
@@ -85,16 +98,24 @@ function Header() {
           </ul>
           <ul className="nav-socials">
             <li>
-              <a href="#">whatsapp</a>
+              <a href="#">
+                <FontAwesomeIcon icon={faWhatsapp} />
+              </a>
             </li>
             <li>
-              <a href="#">linkedin</a>
+              <a href="#">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
             </li>
             <li>
-              <a href="#">github</a>
+              <a href="#">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
             </li>
             <li>
-              <a href="#">ig</a>
+              <a href="#">
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
             </li>
           </ul>
         </div>
