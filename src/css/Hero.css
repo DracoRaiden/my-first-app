@@ -2,17 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Orbitron;
 }
 
 .hero {
   display: flex;
-  background-color: cadetblue;
-  height: 610px;
-  width: 100%;
+  /* background-color: cadetblue; */
+  /* height: 650px; */
+  height: 100vh;
+  width: 100vw;
   justify-content: space-evenly;
   align-items: center;
   color: white;
+  padding-bottom: 100px;
 }
 
 .hero-text {
@@ -22,12 +24,38 @@
 }
 
 .hero-text p {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
+  font-size: 3.2rem;
 }
+
+.hero-text button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 1.25rem 1.5rem;
+  /* box-shadow: horizontal verrticle blur(higher means more blur) spread radius(positive means bigger shadow) color  
+  inset(addes shadow internal instead of external) use commas to add mutiple shadows at once; */
+  box-shadow: 0 0 8px darkblue;
+  border-radius: 9999px;
+  color: white;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.badge:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 139, 0.7);
+}
+
 .hero-text-title {
   display: flex;
   flex-direction: column;
@@ -40,4 +68,73 @@
   background-size: cover;
   border-radius: 50%;
   background-position-y: -100px;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 5px 0px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 1s;
+}
+
+.see-more-btn:hover {
+  cursor: pointer;
+  background-color: rgb(0, 0, 139, 0.7);
+}
+
+.see-more-btn::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-top: 2px solid rgb(0, 162, 255);
+  border-left: 2px solid rgb(0, 162, 255);
+  width: 1rem;
+  height: 1rem;
+  bottom: 6px;
+}
+
+.see-more-btn::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  border-bottom: 2px solid rgb(0, 162, 255);
+  border-right: 2px solid rgb(0, 162, 255);
+  width: 1rem;
+  height: 1rem;
+  top: 10px;
+}
+
+@media (max-width: 786px) {
+  .hero {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .hero-image {
+    height: 300px;
+    width: 300px;
+  }
+  .hero-text {
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .hero-text-title {
+    align-items: center;
+  }
+
+  .hero-text button {
+    font-size: 13px;
+  }
+  .badge {
+    font-size: 12px;
+    padding: 1rem 1.25rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
 }

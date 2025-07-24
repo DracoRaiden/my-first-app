@@ -1,1 +1,14 @@
+.bg {
+  background-image: url("./img/bg.jpg");
+  background-size: cover;
+  opacity: 0.93;
+  height: 100vh;
+  width: 100vw;
+}
 
+.Header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}

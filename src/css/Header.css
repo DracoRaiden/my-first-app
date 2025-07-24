@@ -6,7 +6,7 @@
 }
 
 header {
-  background-color: rgb(4, 4, 68);
+  /* background-color: rgb(4, 4, 68); */
   color: white;
 }
 
@@ -15,7 +15,6 @@ nav {
   justify-content: space-evenly;
   height: 80px;
   line-height: 80px;
-  /* padding: 0 80px 0 80px; */
   align-items: center;
   width: 100%;
 }
@@ -71,7 +70,8 @@ nav {
 }
 .hamburger button {
   border: none;
-  background-color: rgb(4, 4, 68);
+  background: none;
+  /* background-color: rgb(4, 4, 68); */
   color: white;
   padding: 10px 20px 10px 20px;
   text-align: center;
@@ -81,7 +81,7 @@ nav {
 }
 
 .hamburger button:hover {
-  background-color: rgb(12, 12, 106);
+  /* background-color: rgb(12, 12, 106); */
   cursor: pointer;
 }
 
@@ -97,7 +97,7 @@ nav {
 .mobile-menu {
   display: flex;
   flex-direction: column;
-  background-color: rgb(4, 4, 68);
+  /* background-color: rgb(4, 4, 68); */
   position: absolute;
   top: 50px;
   left: 0;
@@ -105,7 +105,7 @@ nav {
   height: 60px;
   align-items: center;
   opacity: 0;
-  transform: translateY(-150px);
+  transform: translateY(-200px);
   transition: all 0.3s ease;
 }
 
