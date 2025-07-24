@@ -10,6 +10,8 @@ function App() {
         <Header />
         <Hero />
       </div>
+      <div className="main"></div>
+      <div className="Footer"></div>
     </div>
   );
 }

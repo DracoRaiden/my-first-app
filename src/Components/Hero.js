@@ -11,7 +11,7 @@ function Hero() {
           </a>
         </p>
         <div className="hero-text-title">
-          <h2>DRACO RAIDEN'S</h2>
+          <h2 className="">DRACO RAIDEN'S</h2>
           <h2>PORTFOLIO</h2>
         </div>
         <p className="button-border">
