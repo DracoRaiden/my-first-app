@@ -11,12 +11,16 @@ header {
 }
 
 nav {
+  position: fixed;
+  top: 0px;
   display: flex;
   justify-content: space-evenly;
-  height: 80px;
-  line-height: 80px;
+  height: 10vh;
+  /* height: 80px; */
+  line-height: 10vh;
   align-items: center;
   width: 100%;
+  z-index: 1;
 }
 
 .logo-here {
