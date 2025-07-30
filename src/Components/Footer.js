@@ -1,5 +1,8 @@
 import "../css/Footer.css";
+
 function Footer() {
+  const vidurl = "https://youtu.be/cgG7s_JMzw8";
+
   return (
     <footer>
       <div className="footer-pannel1">

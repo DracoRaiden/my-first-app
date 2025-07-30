@@ -1,4 +1,4 @@
-import pfp from "../img/profile_picture.jpg";
+// import pfp from "../img/profile_picture.jpg";
 import "../css/Hero.css";
 
 function Hero() {

@@ -13,10 +13,21 @@
 }
 
 .Header {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* position: absolute;
   top: 0;
   width: 100vw;
   height: 100vh;
-  /* overflow: hidden; */
+  box-sizing: border-box; */
+}
+
+.Footer {
+  width: 100vw;
+  /* height: 100vh; */
+  /* position: relative; */
+}
+
+.hero {
   box-sizing: border-box;
 }

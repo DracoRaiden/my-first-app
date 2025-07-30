@@ -25,4 +25,7 @@
 .footer-pannel2 {
   height: 100vh;
   background-color: #344f6f;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
